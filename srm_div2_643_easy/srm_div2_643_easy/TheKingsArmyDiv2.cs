@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace srm_div2_643_easy
 {
-    class TheKingsArmyDiv2
+    public class TheKingsArmyDiv2
     {
         public int getNumber(String[] state)
         {
+	    Debugger.Break();
             Boolean flag1 = false;
             Boolean flag2 = false;
             for (int i = 0; i < state.Length; i++ )

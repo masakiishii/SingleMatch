@@ -13,6 +13,7 @@ namespace srm_div2_630_easy
             DoubleLetter dubleletter = new DoubleLetter();
             Console.WriteLine(dubleletter.ableToSolve("aabccb"));
             Console.ReadLine();
+	    Console.
         }
     }
 }
