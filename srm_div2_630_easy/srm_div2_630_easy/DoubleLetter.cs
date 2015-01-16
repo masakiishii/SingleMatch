@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace srm_div2_630_easy
 {
-    class DoubleLetter
+    public class DoubleLetter
     {
         public String ableToSolve(String s)
         {
+            Debugger.Break();
             Boolean flag = false;
             while(!flag) {
                 flag = true;

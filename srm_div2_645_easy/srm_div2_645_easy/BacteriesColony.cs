@@ -27,7 +27,8 @@ namespace srm_div2_645_easy
                 }
                 answercolonies.CopyTo(colonies, 0);
             }
-            return answercolonies;
+            return answercolonies
+                ;
         }
     }
 }
