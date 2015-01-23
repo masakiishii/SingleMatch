@@ -11,28 +11,25 @@ namespace srm_div2_640_medium
         public long solve(int k, long[] table)
         {
             long goal = (1L << k) - 1;
-            Array.Sort(table);
             int n = table.Length;
-            bool[] use = new bool[n];
-            HashSet<long> set = new HashSet<long>();
-            for (int i = 0; i < n; i++)
+            bool[] flaglist = new bool[n];
+            HashSet<long> hash = new HashSet<long>();
+            Array.Sort(table);
+            for (int i = 0; i < n; i++ )
             {
-                long v = table[i];
-                int t = 0;
-                while (v > 1)
-                {
-                    if (set.Contains(v))
-                    {
-                        use[i] = true;
+                long current = table[i];
+                int p = 0;
+                while(current > 1) {
+                    if(hash.Contains(current)) {
+                        flaglist[i] = true;
                         break;
                     }
-                    v >>= 1;
-                    t++;
+                    current >>= 1;
+                    p++;
                 }
-                set.Add(table[i]);
-                if (!use[i])
-                {
-                    goal -= (1L << (k - t)) -1;
+                hash.Add(table[i]);
+                if(!flaglist[i]) {
+                    goal -= (1L << (k - p)) - 1;
                 }
             }
             return goal - 1;
